@@ -22,6 +22,14 @@ services:
     volumes:
       - ./channel/crypto-config/peerOrganizations/org1.example.com/ca/:/etc/hyperledger/fabric-ca-server-config
     container_name: ca_peerOrg1
+    extra_hosts:
+      - "ca.org1.example.com:192.168.10.78"
+      - "ca.org2.example.com:192.168.10.78"
+      - "orderer.example.com:192.168.10.110"
+      - "peer0.org1.example.com:192.168.10.78"
+      - "peer1.org1.example.com:192.168.10.78"
+      - "peer0.org2.example.com:192.168.10.78"
+      - "peer1.org2.example.com:192.168.10.78"
 
   ca.org2.example.com:
     image: hyperledger/fabric-ca:x86_64-1.0.0
@@ -38,6 +46,14 @@ services:
     volumes:
       - ./channel/crypto-config/peerOrganizations/org2.example.com/ca/:/etc/hyperledger/fabric-ca-server-config
     container_name: ca_peerOrg2
+    extra_hosts:
+      - "ca.org1.example.com:192.168.10.78"
+      - "ca.org2.example.com:192.168.10.78"
+      - "orderer.example.com:192.168.10.110"
+      - "peer0.org1.example.com:192.168.10.78"
+      - "peer1.org1.example.com:192.168.10.78"
+      - "peer0.org2.example.com:192.168.10.78"
+      - "peer1.org2.example.com:192.168.10.78"
 
   orderer.example.com:
     container_name: orderer.example.com
@@ -62,6 +78,14 @@ services:
         - ./channel/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/:/etc/hyperledger/crypto/orderer
         - ./channel/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/:/etc/hyperledger/crypto/peerOrg1
         - ./channel/crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/:/etc/hyperledger/crypto/peerOrg2
+    extra_hosts:
+      - "ca.org1.example.com:192.168.10.78"
+      - "ca.org2.example.com:192.168.10.78"
+      - "orderer.example.com:192.168.10.110"
+      - "peer0.org1.example.com:192.168.10.78"
+      - "peer1.org1.example.com:192.168.10.78"
+      - "peer0.org2.example.com:192.168.10.78"
+      - "peer1.org2.example.com:192.168.10.78"
 
   peer0.org1.example.com:
     container_name: peer0.org1.example.com
@@ -79,6 +103,14 @@ services:
         - ./channel/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/:/etc/hyperledger/crypto/peer
     depends_on:
       - orderer.example.com
+    extra_hosts:
+      - "ca.org1.example.com:192.168.10.78"
+      - "ca.org2.example.com:192.168.10.78"
+      - "orderer.example.com:192.168.10.110"
+      - "peer0.org1.example.com:192.168.10.78"
+      - "peer1.org1.example.com:192.168.10.78"
+      - "peer0.org2.example.com:192.168.10.78"
+      - "peer1.org2.example.com:192.168.10.78"
 
   peer1.org1.example.com:
     container_name: peer1.org1.example.com
@@ -96,6 +128,14 @@ services:
         - ./channel/crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/:/etc/hyperledger/crypto/peer
     depends_on:
       - orderer.example.com
+    extra_hosts:
+      - "ca.org1.example.com:192.168.10.78"
+      - "ca.org2.example.com:192.168.10.78"
+      - "orderer.example.com:192.168.10.110"
+      - "peer0.org1.example.com:192.168.10.78"
+      - "peer1.org1.example.com:192.168.10.78"
+      - "peer0.org2.example.com:192.168.10.78"
+      - "peer1.org2.example.com:192.168.10.78"
 
   peer0.org2.example.com:
     container_name: peer0.org2.example.com
@@ -113,6 +153,14 @@ services:
         - ./channel/crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/:/etc/hyperledger/crypto/peer
     depends_on:
       - orderer.example.com
+    extra_hosts:
+      - "ca.org1.example.com:192.168.10.78"
+      - "ca.org2.example.com:192.168.10.78"
+      - "orderer.example.com:192.168.10.110"
+      - "peer0.org1.example.com:192.168.10.78"
+      - "peer1.org1.example.com:192.168.10.78"
+      - "peer0.org2.example.com:192.168.10.78"
+      - "peer1.org2.example.com:192.168.10.78"
 
   peer1.org2.example.com:
     container_name: peer1.org2.example.com
@@ -130,3 +178,11 @@ services:
         - ./channel/crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/:/etc/hyperledger/crypto/peer
     depends_on:
       - orderer.example.com
+    extra_hosts:
+      - "ca.org1.example.com:192.168.10.78"
+      - "ca.org2.example.com:192.168.10.78"
+      - "orderer.example.com:192.168.10.110"
+      - "peer0.org1.example.com:192.168.10.78"
+      - "peer1.org1.example.com:192.168.10.78"
+      - "peer0.org2.example.com:192.168.10.78"
+      - "peer1.org2.example.com:192.168.10.78"

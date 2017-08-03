@@ -1,7 +1,7 @@
 {
 	"network-config": {
 		"orderer": {
-			"url": "grpcs://localhost:7050",
+			"url": "grpcs://192.168.10.110:7050",
 			"server-hostname": "orderer.example.com",
 			"tls_cacerts": "../artifacts/channel/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt"
 		},
