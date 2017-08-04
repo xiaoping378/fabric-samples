@@ -45,6 +45,7 @@ var invokeChaincode = function(peersUrls, channelName, chaincodeName, fcn, args,
 			chainId: channelName,
 			txId: tx_id
 		};
+		logger.debug("!!!!!!!!!!!!!!!!!!!!!!peer url is %s", peersUrls[0])
 		return channel.sendTransactionProposal(request);
 	}, (err) => {
 		logger.error('Failed to enroll user \'' + username + '\'. ' + err);

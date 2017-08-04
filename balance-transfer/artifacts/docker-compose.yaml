@@ -26,10 +26,10 @@ services:
       - "ca.org1.example.com:192.168.10.78"
       - "ca.org2.example.com:192.168.10.78"
       - "orderer.example.com:192.168.10.110"
-      - "peer0.org1.example.com:192.168.10.78"
-      - "peer1.org1.example.com:192.168.10.78"
-      - "peer0.org2.example.com:192.168.10.78"
-      - "peer1.org2.example.com:192.168.10.78"
+      - "peer0.org1.example.com:192.168.10.114"
+      - "peer1.org1.example.com:192.168.10.114"
+      - "peer0.org2.example.com:192.168.10.115"
+      - "peer1.org2.example.com:192.168.10.115"
 
   ca.org2.example.com:
     image: hyperledger/fabric-ca:x86_64-1.0.0
@@ -50,10 +50,10 @@ services:
       - "ca.org1.example.com:192.168.10.78"
       - "ca.org2.example.com:192.168.10.78"
       - "orderer.example.com:192.168.10.110"
-      - "peer0.org1.example.com:192.168.10.78"
-      - "peer1.org1.example.com:192.168.10.78"
-      - "peer0.org2.example.com:192.168.10.78"
-      - "peer1.org2.example.com:192.168.10.78"
+      - "peer0.org1.example.com:192.168.10.114"
+      - "peer1.org1.example.com:192.168.10.114"
+      - "peer0.org2.example.com:192.168.10.115"
+      - "peer1.org2.example.com:192.168.10.115"
 
   orderer.example.com:
     container_name: orderer.example.com
@@ -82,10 +82,10 @@ services:
       - "ca.org1.example.com:192.168.10.78"
       - "ca.org2.example.com:192.168.10.78"
       - "orderer.example.com:192.168.10.110"
-      - "peer0.org1.example.com:192.168.10.78"
-      - "peer1.org1.example.com:192.168.10.78"
-      - "peer0.org2.example.com:192.168.10.78"
-      - "peer1.org2.example.com:192.168.10.78"
+      - "peer0.org1.example.com:192.168.10.114"
+      - "peer1.org1.example.com:192.168.10.114"
+      - "peer0.org2.example.com:192.168.10.115"
+      - "peer1.org2.example.com:192.168.10.115"
 
   peer0.org1.example.com:
     container_name: peer0.org1.example.com
@@ -107,10 +107,10 @@ services:
       - "ca.org1.example.com:192.168.10.78"
       - "ca.org2.example.com:192.168.10.78"
       - "orderer.example.com:192.168.10.110"
-      - "peer0.org1.example.com:192.168.10.78"
-      - "peer1.org1.example.com:192.168.10.78"
-      - "peer0.org2.example.com:192.168.10.78"
-      - "peer1.org2.example.com:192.168.10.78"
+      - "peer0.org1.example.com:192.168.10.114"
+      - "peer1.org1.example.com:192.168.10.114"
+      - "peer0.org2.example.com:192.168.10.115"
+      - "peer1.org2.example.com:192.168.10.115"
 
   peer1.org1.example.com:
     container_name: peer1.org1.example.com
@@ -132,10 +132,10 @@ services:
       - "ca.org1.example.com:192.168.10.78"
       - "ca.org2.example.com:192.168.10.78"
       - "orderer.example.com:192.168.10.110"
-      - "peer0.org1.example.com:192.168.10.78"
-      - "peer1.org1.example.com:192.168.10.78"
-      - "peer0.org2.example.com:192.168.10.78"
-      - "peer1.org2.example.com:192.168.10.78"
+      - "peer0.org1.example.com:192.168.10.114"
+      - "peer1.org1.example.com:192.168.10.114"
+      - "peer0.org2.example.com:192.168.10.115"
+      - "peer1.org2.example.com:192.168.10.115"
 
   peer0.org2.example.com:
     container_name: peer0.org2.example.com
@@ -157,10 +157,10 @@ services:
       - "ca.org1.example.com:192.168.10.78"
       - "ca.org2.example.com:192.168.10.78"
       - "orderer.example.com:192.168.10.110"
-      - "peer0.org1.example.com:192.168.10.78"
-      - "peer1.org1.example.com:192.168.10.78"
-      - "peer0.org2.example.com:192.168.10.78"
-      - "peer1.org2.example.com:192.168.10.78"
+      - "peer0.org1.example.com:192.168.10.114"
+      - "peer1.org1.example.com:192.168.10.114"
+      - "peer0.org2.example.com:192.168.10.115"
+      - "peer1.org2.example.com:192.168.10.115"
 
   peer1.org2.example.com:
     container_name: peer1.org2.example.com
@@ -182,7 +182,7 @@ services:
       - "ca.org1.example.com:192.168.10.78"
       - "ca.org2.example.com:192.168.10.78"
       - "orderer.example.com:192.168.10.110"
-      - "peer0.org1.example.com:192.168.10.78"
-      - "peer1.org1.example.com:192.168.10.78"
-      - "peer0.org2.example.com:192.168.10.78"
-      - "peer1.org2.example.com:192.168.10.78"
+      - "peer0.org1.example.com:192.168.10.114"
+      - "peer1.org1.example.com:192.168.10.114"
+      - "peer0.org2.example.com:192.168.10.115"
+      - "peer1.org2.example.com:192.168.10.115"
